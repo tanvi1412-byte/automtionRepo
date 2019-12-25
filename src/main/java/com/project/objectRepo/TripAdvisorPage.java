@@ -25,10 +25,10 @@ public class TripAdvisorPage extends PropertyReader implements IFilePath{
 	 * @param driver
 	 * @throws Throwable 
 	 */
-	PropertyReader pred;
+	
 	public TripAdvisorPage(WebDriver driver) throws Throwable {
 		
-		driver.get(pred.getPropertyConfig(PROP,"URLTripAdv"));
+		driver.get(getPropertyConfig(PROP,"URLTripAdv"));
 		PageFactory.initElements(driver, this);
 		this.driver = driver;
 		act = new Actions(driver);
